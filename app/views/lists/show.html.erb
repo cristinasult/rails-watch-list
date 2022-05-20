@@ -17,8 +17,11 @@
   <% @list.bookmarks.each do |bookmark| %>
     <div class="row">
       <div class="col">
-        <%= bookmark.movie.title %>
         <%= bookmark.comment %>
+        <%= bookmark.movie.title %>
+        <%= bookmark.movie.overview %>
+        <%= bookmark.movie.rating %>
+        <img src="<%= bookmark.movie.poster_url%>" alt="movie image">
       </div>
     </div>
     <hr>
