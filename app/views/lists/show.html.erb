@@ -10,15 +10,18 @@
 
 <div align="center" class="m-3">
   <h2>Movies</h2>
-  <div class="d-flex justify-content-between my-4">
-    <div class="card" style="width: 18rem;">
+  <div class="row">
       <% @list.bookmarks.each do |bookmark| %>
-        <img src="<%= bookmark.movie.poster_url%>" class="card-img-top" alt="movie image">
-        <div class="card-body">
-          <h5 class="card-title"><strong><%= bookmark.movie.title %></strong> • <%= bookmark.movie.rating %> <i class="fas fa-star star-yellow"></i></h5>
-          <p class="card-text"><%= bookmark.movie.overview %></p>
-          <p>"<%= bookmark.comment %>"</p>
+        <div class="col-sm-4">
+          <div class="card" style="width: 18rem;">
+          <img src="<%= bookmark.movie.poster_url%>" class="card-img-top" alt="movie image">
+          <div class="card-body">
+            <h5 class="card-title"><strong><%= bookmark.movie.title %></strong> • <%= bookmark.movie.rating %> <i class="fas fa-star star-yellow"></i></h5>
+            <p class="card-text"><%= bookmark.movie.overview %></p>
+            <p>"<%= bookmark.comment %>"</p>
+          </div>
         </div>
+      </div>
       <% end %>
     </div>
   </div>
